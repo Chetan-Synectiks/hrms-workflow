@@ -14,3 +14,12 @@ signin:
               path: /signin
               method: post
               cors: true
+
+changePassword:
+    handler: auth/changePassword.handler
+    role: ${env:LAMBDA_ROLE}
+    events:
+        - http:
+              path: /changePassword
+              method: post
+              cors: true              
